@@ -1,0 +1,16 @@
+{
+  "name": "wasm-game-of-life",
+  "version": "1.0.0",
+  "private": "true",
+  "scripts": {
+    "build": "",
+    "build_": "wasm-pack build && rm -rf pkg/package.json pkg/.gitignore || exit 0",
+    "dev": "cargo watch -i .gitignore -i \"pkg/*\" -s \"wasm-pack build\""
+  },
+  "module": "./pkg/wasm_game_of_life.js",
+  "types": "./pkg/wasm_game_of_life.d.ts",
+  "dependencies": {
+    "wasm-pack": "^0.10.0"
+  },
+  "sideEffects": false
+}
